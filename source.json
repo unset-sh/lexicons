@@ -1,0 +1,47 @@
+{
+  "repository": "https://github.com/Undefined6799/unset",
+  "commit": "9817f1e7ed51fdd5989d6bad6261a9e167d97b80",
+  "documentationCommit": "3134b3fa43ec6d5ce7bb6c34af705828795ae589",
+  "schemas": {
+    "lexicons/sh/unset/authFull.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.authFull.json",
+      "sha256": "b71dffdf5a893f6d1bebd0b5317a5d04f311ff8e902355b1df05e8b961373248"
+    },
+    "lexicons/sh/unset/block/buttons.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.block.buttons.json",
+      "sha256": "13427ba986b9f7680dd2e78abcf458894a6f5a1916cb24644401894fee93ddde"
+    },
+    "lexicons/sh/unset/block/defs.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.block.defs.json",
+      "sha256": "b454fa27b0a994c2c2b04a13b9d11afd4eee3214e2a1af9a073fa383c0b1d0fb"
+    },
+    "lexicons/sh/unset/block/images.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.block.images.json",
+      "sha256": "59b12b9b2cf516a14bac0f9e15b27ec5485d6833c4945c9efeb7e30ed3d27ec2"
+    },
+    "lexicons/sh/unset/block/links.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.block.links.json",
+      "sha256": "94422b277881aec14d52d18997e08a985b65b9206d9f65d216e46e53c88e0820"
+    },
+    "lexicons/sh/unset/block/showcase.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.block.showcase.json",
+      "sha256": "b8a33742290a2033cc71c65ab1710d0cc1f0c52407982ac4216a43baf58c24e7"
+    },
+    "lexicons/sh/unset/block/text.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.block.text.json",
+      "sha256": "9db3f9668359fec5ff9ecdabed5d4d568043218d6f82de150658424f8b68178e"
+    },
+    "lexicons/sh/unset/card.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.card.json",
+      "sha256": "cecaeeeb5db992f03b97b11d9b701d0b19e1892ee2a018ade474870ccbd25987"
+    },
+    "lexicons/sh/unset/page.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.page.json",
+      "sha256": "79e6fdea38c7e3ebb3b35783f2fe47a6a2195f4c1944007b5d35fa0a37bdbb75"
+    },
+    "lexicons/sh/unset/profile.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.profile.json",
+      "sha256": "19ec531c273812f0b35438fe42fc4f4e4b7e38abfa3bd285a327975d96b6a588"
+    }
+  }
+}
