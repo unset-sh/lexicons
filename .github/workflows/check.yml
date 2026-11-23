@@ -1,8 +1,9 @@
 name: Check
 on:
   push:
-    branches: [main]
+    branches: [staging, main]
   pull_request:
+    branches: [staging, main]
 permissions:
   contents: read
 jobs:
