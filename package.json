@@ -5,7 +5,7 @@
   "type": "module",
   "license": "MIT",
   "scripts": {
-    "check": "tsc --noEmit && biome check scripts package.json tsconfig.json biome.json && bun test scripts/check.test.ts && bun scripts/check.ts",
+    "check": "tsc --noEmit && biome check scripts package.json tsconfig.json biome.json && bun test scripts/check.test.ts && bun scripts/check.ts && bun .claude/agent-kit/sync.mjs --check",
     "docs": "bun scripts/docs.ts",
     "test": "bun test scripts/check.test.ts"
   },
