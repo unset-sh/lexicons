@@ -1,0 +1,40 @@
+{
+  "$type": "sh.unset.card",
+  "content": {
+    "$type": "sh.unset.block.text",
+    "text": "## Opening hours\n\nWe are open on weekdays.\n\n| Day | Hours |\n| --- | --- |\n| Mon | 9-17 |\n| Tue | 9-17 |",
+    "tableStyle": {
+      "showColumnLines": true,
+      "tables": [
+        {
+          "lines": [
+            "e5ba6a98",
+            "a5a2bde1",
+            "d1b22274"
+          ],
+          "edges": [
+            {
+              "direction": "horizontal",
+              "line": 2,
+              "cell": 0,
+              "hide": true
+            }
+          ]
+        }
+      ]
+    },
+    "textStyle": {
+      "align": [
+        {
+          "lines": [
+            "a043cd3f"
+          ],
+          "value": "center"
+        }
+      ]
+    }
+  },
+  "width": "full",
+  "surface": "plain",
+  "createdAt": "2026-11-23T02:00:00.000Z"
+}
