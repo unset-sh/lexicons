@@ -11,6 +11,7 @@ uploaded media.
 | [Minimal page](sh/unset/page/minimal.json) | Page with an optional creation time and no cards |
 | [Main page](sh/unset/page/main.json) | Ordered references to five cards |
 | [Text card](sh/unset/card/text.json) | Markdown text |
+| [Text card with looks](sh/unset/card/text-looks.json) | Markdown text with table lines and alignment |
 | [Links card](sh/unset/card/links.json) | Links to other sites |
 | [Showcase card](sh/unset/card/showcase.json) | Titled entries with pictures |
 | [Buttons card](sh/unset/card/buttons.json) | Link and email buttons |

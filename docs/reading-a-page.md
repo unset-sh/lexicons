@@ -65,7 +65,8 @@ Everything in a record was written by someone else. Before showing it:
 
 - **Links.** Keep only `http` and `https` URLs. Ignore any other scheme.
 - **Text.** The text block is Markdown. Never render raw HTML from it, and keep only `http` and `https` links.
-  Show syntax you do not support as plain text.
+  Show syntax you do not support as plain text. Apply the optional `tableStyle` and `textStyle` looks only to the
+  block whose line fingerprints they match; see the [text block](lexicons/block-text.md).
 - **Pictures.** Never hand a blob to a browser as it is. Check its real type and re-encode it first; the declared
   type may be wrong. Decide how to show a picture linked from Markdown yourself, for example as a plain link, or
   loaded through your own proxy so the picture's host never learns who is reading.

@@ -1,6 +1,6 @@
 {
   "repository": "https://github.com/Undefined6799/unset",
-  "commit": "9817f1e7ed51fdd5989d6bad6261a9e167d97b80",
+  "commit": "7b3333ed48af1f5c32a49e0e15a8b9462fef67d6",
   "documentationCommit": "3134b3fa43ec6d5ce7bb6c34af705828795ae589",
   "schemas": {
     "lexicons/sh/unset/authFull.json": {
@@ -29,7 +29,7 @@
     },
     "lexicons/sh/unset/block/text.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.text.json",
-      "sha256": "9db3f9668359fec5ff9ecdabed5d4d568043218d6f82de150658424f8b68178e"
+      "sha256": "5460ba967a0ea92991b8c6c2ed1129998e5d03b096d2f2eb14c47d3a7d9c2c83"
     },
     "lexicons/sh/unset/card.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.card.json",
