@@ -4,13 +4,10 @@
   "private": true,
   "type": "module",
   "license": "MIT",
-  "engines": {
-    "node": "26.12.0"
-  },
   "scripts": {
-    "check": "tsc --noEmit && biome check scripts package.json tsconfig.json biome.json && node --test scripts/check.test.ts && node scripts/check.ts",
-    "docs": "node scripts/docs.ts",
-    "test": "node --test scripts/check.test.ts"
+    "check": "tsc --noEmit && biome check scripts package.json tsconfig.json biome.json && bun test scripts/check.test.ts && bun scripts/check.ts && bun .claude/agent-kit/sync.mjs --check",
+    "docs": "bun scripts/docs.ts",
+    "test": "bun test scripts/check.test.ts"
   },
   "devDependencies": {
     "@atproto/lex-builder": "0.1.20",

@@ -31,19 +31,19 @@ does not publish an SDK or change the application's dependency wiring.
 
 ## Keeping documentation current
 
-Use the Node version in [`.nvmrc`](../.nvmrc), then run from the repository root:
+Use the Bun version in [`.bun-version`](../.bun-version), then run from the repository root:
 
 ```sh
-npm ci
-npm run docs
-npm run check
+bun install --frozen-lockfile
+bun run docs
+bun run check
 ```
 
-`npm run docs` refreshes blocks marked `<!-- schema:NSID#definition -->` and
+`bun run docs` refreshes blocks marked `<!-- schema:NSID#definition -->` and
 `<!-- example:examples/path.json -->` from the schema and example files. Edit the source file for a reference
 table or example, then regenerate it. Keep the surrounding explanation written for the reader.
 
-`npm run check` validates the repository. Read the prose after regeneration too: generated tables cannot tell
+`bun run check` validates the repository. Read the prose after regeneration too: generated tables cannot tell
 whether a quick start preserves visibility or whether a publication claim is accurate. New lexicons need a
 reference page, suitable examples and links from the [documentation index](README.md).
 

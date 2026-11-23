@@ -52,17 +52,15 @@ how to refresh schemas and documentation together without losing changes here.
 
 ## Check the repository
 
-Use Node 26.12.0, as recorded in [`.nvmrc`](.nvmrc):
+Use the Bun version recorded in [`.bun-version`](.bun-version):
 
 ```sh
-nvm install
-nvm use
-npm ci --ignore-scripts
-npm run check
+bun install --frozen-lockfile
+bun run check
 ```
 
 Checks cover Lexicon schemas, references, sample records, documentation coverage, generated tables and local links.
-After changing a schema or sample, run `npm run docs` to regenerate the marked reference blocks, then review the
+After changing a schema or sample, run `bun run docs` to regenerate the marked reference blocks, then review the
 surrounding prose and run the checks again. No account, credentials or running PDS are needed.
 
 There is no published SDK or npm package. The development tools validate these files; applications can generate
