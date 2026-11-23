@@ -30,11 +30,9 @@ does not authorize changes to DNS, the Lexicon authority account, or OAuth grant
 ## Local checks
 
 ```sh
-nvm install
-nvm use
-npm ci --ignore-scripts
-npm run docs
-npm run check
+bun install --frozen-lockfile
+bun run docs
+bun run check
 ```
 
 Reference tables and examples between generated markers in `docs/` come from the schema and JSON sample files.
@@ -42,9 +40,10 @@ Change those inputs, regenerate, then review the prose. Every record and block n
 record definition needs a reference table, and local Markdown links must resolve.
 
 Use a branch and open a pull request. Keep commits short and imperative. Run all checks and describe what changed,
-why, and how it was checked. Do not push directly to `main`; the author does not merge their own change.
+why, and how it was checked. Target `staging`, never `main`; the author does not merge their own change. Only Alex promotes `staging` to
+`main`, and only a promotion he authorised publishes lexicons to the network.
 
 ## Security
 
 Do not include passwords, tokens, recovery keys or real personal data in issues, examples or tests. Report
-vulnerabilities through the application's [security policy](https://github.com/Undefined6799/unset/security/policy).
+vulnerabilities through the organisation's [security policy](https://github.com/unset-sh/.github/blob/main/SECURITY.md).

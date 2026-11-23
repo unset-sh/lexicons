@@ -5,7 +5,7 @@
 //   <!-- /schema -->
 //
 // and an example with `<!-- example:examples/sh/unset/card/text.json -->` and `<!-- /example -->`.
-// `npm run docs` fills every block; `npm run check` detects drift and undocumented definitions.
+// `bun run docs` fills every block; `bun run check` detects drift and undocumented definitions.
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
@@ -166,7 +166,7 @@ export function docsProblems(schemas: readonly Schema[], root = PUBLIC): string[
     for (const [, file = ""] of text.matchAll(EXAMPLE))
       if (example(file, root) === undefined) found.push(`${page}: ${file} is not a sample record here`);
     if (fill(text, schemas, root) !== text)
-      found.push(`${page}: a generated block is out of date; run npm run docs`);
+      found.push(`${page}: a generated block is out of date; run bun run docs`);
     return found;
   });
   for (const { nsid, defs } of schemas)
