@@ -134,7 +134,10 @@ test("refuses unknown fields in nested authored examples", async () => {
 });
 
 test("detects a missing block example", async () => {
-  await fixture((root) => rmSync(join(root, sample)), /no example covers sh\.unset\.block\.text#main/);
+  await fixture((root) => {
+    rmSync(join(root, sample));
+    rmSync(join(root, "examples/sh/unset/card/text-looks.json"));
+  }, /no example covers sh\.unset\.block\.text#main/);
 });
 
 test("detects stale generated documentation", async () => {
