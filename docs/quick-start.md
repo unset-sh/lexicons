@@ -1,4 +1,8 @@
-# Quick start
+---
+title: "Quick start"
+description: "Create a profile and a main page with one card, then read them back."
+weight: 10
+---
 
 Create a profile and a new main page with one card, then read them back. The JSON below contains record values;
 the surrounding XRPC request also needs the account's DID and the collection and record key described below.
@@ -155,5 +159,5 @@ an empty `alt` marks a decorative image. See the [images block](lexicons/block-i
 
 ## More examples
 
-The [nine example records](../examples/README.md) cover the profile, page and every block type. They are
+The [nine example records](https://github.com/unset-sh/lexicons/blob/main/examples/README.md) cover the profile, page and every block type. They are
 illustrative payloads checked against the schemas, not pre-existing records or retrievable media.

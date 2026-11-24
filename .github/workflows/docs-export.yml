@@ -1,0 +1,34 @@
+name: docs-export
+
+# Packages docs/ as the lexicons section of docs.unset.sh. unset-sh/docs imports only a successful
+# push run of this file on main (tooling docs/import-docs.md, source key lexicons), so the docs
+# reach the site when staging is promoted. The check runs first; the export only after it passes.
+# Pinned to a full tooling commit.
+
+on:
+  pull_request:
+    branches: [staging, main]
+  push:
+    branches: [staging, main]
+
+permissions: {}
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    name: Check before export
+    uses: unset-sh/tooling/.github/workflows/ci-check.yml@37ea5787ba7ecbfc9c910be7a8762a58479f2dc5
+    permissions:
+      contents: read
+      packages: read # the shared install step may read @unset-sh packages; lexicons has none today
+    with:
+      install: true
+
+  export:
+    needs: check
+    uses: unset-sh/tooling/.github/workflows/automation-docs-export.yml@37ea5787ba7ecbfc9c910be7a8762a58479f2dc5
+    permissions:
+      contents: read

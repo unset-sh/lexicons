@@ -1,4 +1,8 @@
-# Showcase block
+---
+title: "Showcase block"
+description: "sh.unset.block.showcase: titled items such as projects, writing or talks."
+weight: 6
+---
 
 `sh.unset.block.showcase` is a set of titled items, such as projects, writing or talks.
 
@@ -74,7 +78,7 @@ The picture uses the shared [`sh.unset.block.defs#image`](block-defs.md) shape.
 
 ## View the lexicon
 
-[`lexicons/sh/unset/block/showcase.json`](../../lexicons/sh/unset/block/showcase.json)
+[`lexicons/sh/unset/block/showcase.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/block/showcase.json)
 
 ## Writing a showcase
 

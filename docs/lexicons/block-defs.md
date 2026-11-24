@@ -1,4 +1,8 @@
-# Shared block definitions
+---
+title: "Shared block definitions"
+description: "sh.unset.block.defs: the picture shape the blocks share."
+weight: 9
+---
 
 `sh.unset.block.defs` holds the definitions that more than one block uses. It is not a record or a block of its
 own.
@@ -51,7 +55,7 @@ The [images block](block-images.md) has a complete card.
 
 ## View the lexicon
 
-[`lexicons/sh/unset/block/defs.json`](../../lexicons/sh/unset/block/defs.json)
+[`lexicons/sh/unset/block/defs.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/block/defs.json)
 
 ## Writing a picture
 

@@ -1,4 +1,8 @@
-# Buttons block
+---
+title: "Buttons block"
+description: "sh.unset.block.buttons: a short pitch with up to five buttons."
+weight: 7
+---
 
 `sh.unset.block.buttons` is a short pitch with up to five buttons.
 
@@ -74,7 +78,7 @@ A `preset` says what the button is for, so each reader can word it in the viewer
 
 ## View the lexicon
 
-[`lexicons/sh/unset/block/buttons.json`](../../lexicons/sh/unset/block/buttons.json)
+[`lexicons/sh/unset/block/buttons.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/block/buttons.json)
 
 ## Writing buttons
 

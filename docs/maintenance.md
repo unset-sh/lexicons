@@ -1,4 +1,8 @@
-# Maintenance
+---
+title: "Maintenance"
+description: "Where the schemas come from, how an update is imported, and how the docs stay current."
+weight: 70
+---
 
 The schema source is `shared/lexicons/schemas/` in the
 [unset.sh application repository](https://github.com/Undefined6799/unset). This repository contains an explicit
@@ -7,7 +11,7 @@ does not update this repository automatically.
 
 ## Provenance
 
-[`source.json`](../source.json) records:
+[`source.json`](https://github.com/unset-sh/lexicons/blob/main/source.json) records:
 
 - `repository` and `commit`: the upstream repository and full commit used for the schemas.
 - `schemas`: each local schema's original `sourcePath` and SHA-256 of the copied file bytes.
@@ -31,7 +35,7 @@ does not publish an SDK or change the application's dependency wiring.
 
 ## Keeping documentation current
 
-Use the Bun version in [`.bun-version`](../.bun-version), then run from the repository root:
+Use the Bun version in [`.bun-version`](https://github.com/unset-sh/lexicons/blob/main/.bun-version), then run from the repository root:
 
 ```sh
 bun install --frozen-lockfile
@@ -45,6 +49,6 @@ table or example, then regenerate it. Keep the surrounding explanation written f
 
 `bun run check` validates the repository. Read the prose after regeneration too: generated tables cannot tell
 whether a quick start preserves visibility or whether a publication claim is accurate. New lexicons need a
-reference page, suitable examples and links from the [documentation index](README.md).
+reference page, suitable examples and links from the [documentation index](_index.md).
 
 See [Publication and compatibility](publication.md) before changing public contracts or publication status.

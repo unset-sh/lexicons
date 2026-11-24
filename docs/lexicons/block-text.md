@@ -1,4 +1,8 @@
-# Text block
+---
+title: "Text block"
+description: "sh.unset.block.text: formatted text, written in Markdown."
+weight: 4
+---
 
 `sh.unset.block.text` is formatted text, shown like a README.
 
@@ -140,7 +144,7 @@ rows in the first column, and centres the paragraph.
 
 ## View the lexicon
 
-[`lexicons/sh/unset/block/text.json`](../../lexicons/sh/unset/block/text.json)
+[`lexicons/sh/unset/block/text.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/block/text.json)
 
 ## Writing text
 

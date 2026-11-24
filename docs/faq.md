@@ -1,4 +1,8 @@
-# FAQ
+---
+title: "FAQ"
+description: "Short answers about publication, reading pages and permissions."
+weight: 50
+---
 
 ## Are these lexicons published?
 

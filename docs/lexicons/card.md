@@ -1,4 +1,8 @@
-# Card lexicon
+---
+title: "Card lexicon"
+description: "sh.unset.card: one card on a page, holding exactly one block."
+weight: 3
+---
 
 `sh.unset.card` is one card on a page. It holds exactly one block.
 
@@ -23,7 +27,7 @@ Record key: `tid`
 | `createdAt` | string (datetime) | No |  | When the card was first created. |
 <!-- /schema -->
 
-## Content
+## The content field
 
 `content` is an open union. The block names its own type in `$type`:
 
@@ -59,7 +63,7 @@ Each block's page has an example card holding that block.
 
 ## View the lexicon
 
-[`lexicons/sh/unset/card.json`](../../lexicons/sh/unset/card.json)
+[`lexicons/sh/unset/card.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/card.json)
 
 ## Writing a card
 
