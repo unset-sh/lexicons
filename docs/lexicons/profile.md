@@ -1,4 +1,8 @@
-# Profile lexicon
+---
+title: "Profile lexicon"
+description: "sh.unset.profile: who an account is, shown at the top of its pages."
+weight: 1
+---
 
 `sh.unset.profile` is who an account is on unset.sh: the name, picture and details shown at the top of its pages.
 
@@ -68,7 +72,7 @@ A complete profile:
 
 ## View the lexicon
 
-[`lexicons/sh/unset/profile.json`](../../lexicons/sh/unset/profile.json)
+[`lexicons/sh/unset/profile.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/profile.json)
 
 ## Writing a profile
 

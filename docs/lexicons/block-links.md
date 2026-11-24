@@ -1,4 +1,8 @@
-# Links block
+---
+title: "Links block"
+description: "sh.unset.block.links: a set of links, such as accounts on other sites."
+weight: 5
+---
 
 `sh.unset.block.links` is a set of links, such as a person's accounts on other sites.
 
@@ -51,7 +55,7 @@ the site name from its own list of known sites.
 
 ## View the lexicon
 
-[`lexicons/sh/unset/block/links.json`](../../lexicons/sh/unset/block/links.json)
+[`lexicons/sh/unset/block/links.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/block/links.json)
 
 ## Writing links
 

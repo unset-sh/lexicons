@@ -26,6 +26,8 @@ repository uses or ships, or renames or archives it, open a pull request on `uns
 ## Rules
 
 - Read [CONTRIBUTING.md](CONTRIBUTING.md) and [docs/maintenance.md](docs/maintenance.md) before changing anything.
+- `docs/` is published as the `lexicons/` section of docs.unset.sh from `main` (`.github/workflows/docs-export.yml`).
+  Every page needs front matter with a title; link to files outside `docs/` by their GitHub URL on `main`.
 - Preserve the exact imported schema bytes and their provenance in `source.json`. Coordinate a schema change with
   the source before importing it here, and follow the
   [Lexicon evolution rules](https://atproto.com/specs/lexicon#lexicon-evolution): a breaking change needs a new NSID.

@@ -1,4 +1,8 @@
-# Page lexicon
+---
+title: "Page lexicon"
+description: "sh.unset.page: one page of an account and the cards it shows."
+weight: 2
+---
 
 `sh.unset.page` is one page of an account: the cards it shows, in order, and who it is meant for.
 
@@ -79,7 +83,7 @@ A main page with five cards:
 
 ## View the lexicon
 
-[`lexicons/sh/unset/page.json`](../../lexicons/sh/unset/page.json)
+[`lexicons/sh/unset/page.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/page.json)
 
 ## Writing a page
 

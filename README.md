@@ -4,7 +4,7 @@ The [AT Protocol](https://atproto.com) schemas for [unset.sh](https://unset.sh) 
 Use them to read the same records in another app or build a compatible writer. The schemas and documentation
 are available under the [MIT licence](LICENSE).
 
-**Start with the [documentation](docs/README.md), [quick start](docs/quick-start.md), or
+**Start with the [documentation](docs/_index.md), [quick start](docs/quick-start.md), or
 [sample records](examples/README.md).**
 
 ## The record model

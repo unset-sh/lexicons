@@ -1,4 +1,8 @@
-# Images block
+---
+title: "Images block"
+description: "sh.unset.block.images: one picture, or a small set shown together."
+weight: 8
+---
 
 `sh.unset.block.images` is one picture, or a small set shown together.
 
@@ -60,7 +64,7 @@ Each entry in `images` uses the shared [`sh.unset.block.defs#image`](block-defs.
 
 ## View the lexicon
 
-[`lexicons/sh/unset/block/images.json`](../../lexicons/sh/unset/block/images.json)
+[`lexicons/sh/unset/block/images.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/block/images.json)
 
 ## Writing images
 

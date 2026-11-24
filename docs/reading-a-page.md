@@ -1,4 +1,8 @@
-# Reading a page
+---
+title: "Reading a page"
+description: "The rules an app follows to show someone's page."
+weight: 20
+---
 
 These are the rules an app follows to show someone's page. They combine the lexicons' field descriptions with
 the reference application's handling of invalid records.

@@ -1,4 +1,8 @@
-# Publication and compatibility
+---
+title: "Publication and compatibility"
+description: "What this repository distributes, and the compatibility commitments for the lexicons."
+weight: 40
+---
 
 This GitHub repository distributes the schema source files, examples and documentation. The imported upstream
 [publication ledger](https://github.com/Undefined6799/unset/blob/9817f1e7ed51fdd5989d6bad6261a9e167d97b80/shared/lexicons/published.lock.json)

@@ -1,4 +1,8 @@
-# Permissions
+---
+title: "Permissions"
+description: "The permission set an app asks for to write a profile, its pages and their cards."
+weight: 30
+---
 
 An app that writes a profile, its pages and their cards asks for one permission set, `sh.unset.authFull`.
 

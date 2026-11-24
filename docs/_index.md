@@ -1,4 +1,13 @@
-# The unset.sh lexicons
+---
+title: "Lexicons"
+description: "The sh.unset.* record types that describe a person's pages on the AT Protocol, and how apps read and write them."
+type: docs
+cascade:
+  type: docs
+menus:
+  main:
+    weight: 80
+---
 
 The `sh.unset.*` lexicons describe a person's pages on the AT Protocol: who they are, the cards on a page, and
 what each card holds. The records live in the person's own repository on their Personal Data Server (PDS), so
@@ -70,6 +79,6 @@ third-party adoption also establishes compatibility obligations.
 4. The lexicons: [profile](lexicons/profile.md), [page](lexicons/page.md), [card](lexicons/card.md), and the
    blocks ([text](lexicons/block-text.md), [links](lexicons/block-links.md), [showcase](lexicons/block-showcase.md),
    [buttons](lexicons/block-buttons.md), [images](lexicons/block-images.md), [shared definitions](lexicons/block-defs.md)).
-5. [Examples](../examples/README.md): nine sample records.
+5. [Examples](https://github.com/unset-sh/lexicons/blob/main/examples/README.md): nine sample records.
 6. [Publication and compatibility](publication.md) and [Maintenance](maintenance.md).
 7. [FAQ](faq.md).
