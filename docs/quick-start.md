@@ -144,7 +144,7 @@ This is an illustrative image value. Its CID is syntactically valid but does not
 ```
 
 Replace the whole `image` object with the upload response. Set `alt` and `aspectRatio` for the actual picture;
-an empty `alt` marks a decorative image. See the [images block](lexicons/block-images.md) for a complete card.
+an empty `alt` marks a decorative image. See the [images block](lexicons/block-gallery.md) for a complete card.
 
 ## 4. Read the page
 

@@ -13,9 +13,9 @@ uploaded media.
 | [Text card](sh/unset/actor/card/text.json) | Markdown text |
 | [Text card with looks](sh/unset/actor/card/text-looks.json) | Markdown text with table lines and alignment |
 | [Links card](sh/unset/actor/card/links.json) | Links to other sites |
-| [Showcase card](sh/unset/actor/card/showcase.json) | Titled entries with pictures |
+| [Showcase card](sh/unset/actor/card/showcase.json) | Titled entries with images |
 | [Buttons card](sh/unset/actor/card/buttons.json) | Link and email buttons |
-| [Images card](sh/unset/actor/card/images.json) | Pictures with alt text and proportions |
+| [Gallery card](sh/unset/actor/card/gallery.json) | Images with alt text and proportions |
 
 Before writing, replace the sample DID and card keys with your account's DID and new TIDs. Replace every blob
 object with the result of an upload to that account's PDS. Sample CIDs are valid syntax, not supplied uploads.

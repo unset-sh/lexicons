@@ -13,7 +13,7 @@ are available under the [MIT licence](LICENSE).
 profile (self)       identity and profile details
 page (self)          main page, visibility and ordered card references
   card               one block, with optional width and surface
-    block            text, links, showcase, buttons or images
+    block            text, links, showcase, buttons or gallery
 ```
 
 | Lexicon | Purpose | Reference |
@@ -25,7 +25,7 @@ page (self)          main page, visibility and ordered card references
 | `sh.unset.block.links` | Links to accounts or other sites | [Links](docs/lexicons/block-links.md) |
 | `sh.unset.block.showcase` | Titled projects, writing or other entries | [Showcase](docs/lexicons/block-showcase.md) |
 | `sh.unset.block.buttons` | A heading and email or link buttons | [Buttons](docs/lexicons/block-buttons.md) |
-| `sh.unset.block.images` | Pictures with alt text | [Images](docs/lexicons/block-images.md) |
+| `sh.unset.block.gallery` | Images with alt text | [Gallery](docs/lexicons/block-gallery.md) |
 | `sh.unset.block.defs` | Shared image and aspect ratio definitions | [Shared definitions](docs/lexicons/block-defs.md) |
 | `sh.unset.actor.authProfile` | OAuth permissions for these three record collections | [Permissions](docs/permissions.md) |
 

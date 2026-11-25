@@ -11,7 +11,7 @@
     "lexicons/sh/unset/actor/card.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.card.json",
       "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): moved into the sh.unset.actor group. This repository is its source from then on.",
-      "sha256": "bab5caaa4b075897d0ee3a593d555c140bfffe7228f3a382dd21d7e6f77e5e6d"
+      "sha256": "5cb851f1ab054592e21e49027267202799b5058ed679cf741b71f4517b1d9e63"
     },
     "lexicons/sh/unset/actor/page.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.page.json",
@@ -29,20 +29,23 @@
     },
     "lexicons/sh/unset/block/defs.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.defs.json",
-      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): descriptions reworded so blocks are not tied to cards. This repository is its source from then on.",
-      "sha256": "9d7939d3d43846dc8f4f7851c1f8a1f4a26522dfe6184f977f7bbecc88564314"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): descriptions reworded so blocks are not tied to cards, and pictures are called images. This repository is its source from then on.",
+      "sha256": "f99148782d2e35a015e7179347c01a00691ed669f3b065f76705bc3e2b62790c"
     },
-    "lexicons/sh/unset/block/images.json": {
+    "lexicons/sh/unset/block/gallery.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.images.json",
-      "sha256": "59b12b9b2cf516a14bac0f9e15b27ec5485d6833c4945c9efeb7e30ed3d27ec2"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): renamed from sh.unset.block.images to sh.unset.block.gallery, up to 100 images. This repository is its source from then on.",
+      "sha256": "b8f8d20ca6bae1c75be408d99ba56168c8d48dabfb673266208c0f52d1832ea3"
     },
     "lexicons/sh/unset/block/links.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.links.json",
-      "sha256": "94422b277881aec14d52d18997e08a985b65b9206d9f65d216e46e53c88e0820"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): up to 20 links, each with an optional uploaded icon. This repository is its source from then on.",
+      "sha256": "de8dbeaf980f8fd213177cdd38c4ddfe7ba6757498e57296d8abcb043ea2c26f"
     },
     "lexicons/sh/unset/block/showcase.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.showcase.json",
-      "sha256": "b8a33742290a2033cc71c65ab1710d0cc1f0c52407982ac4216a43baf58c24e7"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): up to 15 items. This repository is its source from then on.",
+      "sha256": "1199fdb7bc5341ac08eeb50153d92cf3668e073aba830d8e387c7a14da9c9dea"
     },
     "lexicons/sh/unset/block/text.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.text.json",

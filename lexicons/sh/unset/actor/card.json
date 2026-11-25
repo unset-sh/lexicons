@@ -17,7 +17,7 @@
               "sh.unset.block.links",
               "sh.unset.block.showcase",
               "sh.unset.block.buttons",
-              "sh.unset.block.images"
+              "sh.unset.block.gallery"
             ],
             "description": "What the card holds: one of the sh.unset.block types. Other apps may add their own types; readers hide types they do not know."
           },

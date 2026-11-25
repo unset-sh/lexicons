@@ -9,7 +9,7 @@ weight: 3
 ## Overview
 
 A card is a slot. It says how wide it is and how its surface is drawn, and its `content` holds the block that
-says what is inside: text, links, a showcase, buttons or pictures.
+says what is inside: text, links, a showcase, buttons or a gallery.
 
 A card is shown only when a [page](page.md) names it in `cards`. Creating a card does not put it on a page, and
 removing the page's entry hides it without deleting it. One card may be named on more than one page.
@@ -21,7 +21,7 @@ Record key: `tid`
 
 | Property | Type | Required | Limits | Description |
 | --- | --- | --- | --- | --- |
-| `content` | open union of `sh.unset.block.text`, `sh.unset.block.links`, `sh.unset.block.showcase`, `sh.unset.block.buttons`, `sh.unset.block.images` | Yes |  | What the card holds: one of the sh.unset.block types. Other apps may add their own types; readers hide types they do not know. |
+| `content` | open union of `sh.unset.block.text`, `sh.unset.block.links`, `sh.unset.block.showcase`, `sh.unset.block.buttons`, `sh.unset.block.gallery` | Yes |  | What the card holds: one of the sh.unset.block types. Other apps may add their own types; readers hide types they do not know. |
 | `width` | string | No | 32 bytes; known values: `full`, `half` | Width on wide screens. Absent or unknown means full. |
 | `surface` | string | No | 32 bytes; known values: `filled`, `outlined`, `plain` | How the card's outer surface is drawn. Absent or unknown means filled. |
 | `createdAt` | string (datetime) | No |  | When the card was first created. |
@@ -37,7 +37,7 @@ Record key: `tid`
 | `sh.unset.block.links` | [Links](block-links.md) |
 | `sh.unset.block.showcase` | [Showcase](block-showcase.md) |
 | `sh.unset.block.buttons` | [Buttons](block-buttons.md) |
-| `sh.unset.block.images` | [Images](block-images.md) |
+| `sh.unset.block.gallery` | [Gallery](block-gallery.md) |
 
 Because the union is open, another app may store a type of its own in `content`, under its own namespace. A
 reader that does not know the type hides the card and does not treat the record as invalid.

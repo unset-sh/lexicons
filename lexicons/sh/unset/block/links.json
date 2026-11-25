@@ -5,7 +5,7 @@
     "main": {
       "type": "object",
       "required": ["items"],
-      "description": "A set of links, such as accounts on other sites. Readers take each link's icon and site name from their own list of known sites; they never fetch the linked site to find them.",
+      "description": "A set of links, such as accounts on other sites. Readers never fetch the linked site to find an icon or a name: they use the link's own icon, else their own list of known sites.",
       "properties": {
         "title": {
           "type": "string",
@@ -21,7 +21,7 @@
         },
         "items": {
           "type": "array",
-          "maxLength": 50,
+          "maxLength": 20,
           "items": {
             "type": "ref",
             "ref": "#link"
@@ -52,6 +52,12 @@
           "maxGraphemes": 200,
           "maxLength": 2000,
           "description": "One line about the link."
+        },
+        "icon": {
+          "type": "blob",
+          "accept": ["image/png", "image/jpeg", "image/webp"],
+          "maxSize": 100000,
+          "description": "A small square icon for the link, uploaded with it. Readers check and re-encode it, and show it no larger than an icon. Absent: the reader's own icon for a known site, or none."
         }
       }
     }

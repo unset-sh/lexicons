@@ -1,7 +1,7 @@
 {
   "$type": "sh.unset.actor.card",
   "content": {
-    "$type": "sh.unset.block.images",
+    "$type": "sh.unset.block.gallery",
     "title": "From the studio",
     "fit": "cover",
     "images": [

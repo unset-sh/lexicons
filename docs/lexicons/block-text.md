@@ -155,7 +155,7 @@ rows in the first column, and centres the paragraph.
 - Do not rely on raw HTML. Readers never render it.
 - Link only to `http` and `https` addresses. Other links are dropped.
 - Do not rely on a picture in the text being shown inline. Each reader decides. For pictures that must show, use
-  the [images block](block-images.md).
+  the [images block](block-gallery.md).
 
 ## Reading text
 
