@@ -41,7 +41,8 @@
     },
     "lexicons/sh/unset/profile.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.profile.json",
-      "sha256": "19ec531c273812f0b35438fe42fc4f4e4b7e38abfa3bd285a327975d96b6a588"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex: fields reduced to displayName, avatar, description and createdAt). This repository is its source from then on.",
+      "sha256": "03159098bdafd80dbf938cdbe15e1bbe12783c7ced7e8f1d4224560d0ef9258e"
     }
   }
 }

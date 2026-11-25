@@ -17,7 +17,7 @@ the pages belong to them and any app can read them.
 
 | Lexicon | Kind | What it is |
 | --- | --- | --- |
-| [`sh.unset.profile`](lexicons/profile.md) | Record | Who the account is: name, headline, picture and details. One per account. |
+| [`sh.unset.profile`](lexicons/profile.md) | Record | Who the account is: name, picture and description. One per account. |
 | [`sh.unset.page`](lexicons/page.md) | Record | One page: the cards it shows, in order, and who it is meant for. The main page is `self`. |
 | [`sh.unset.card`](lexicons/card.md) | Record | One card. It holds exactly one block. |
 | [`sh.unset.block.text`](lexicons/block-text.md) | Block | Formatted text, written in Markdown. |
@@ -39,7 +39,7 @@ sh.unset.page (self)             the main page
 
 ## How it fits together
 
-**The profile is who the account is.** Name, headline, picture, location and website, shown at the top of every
+**The profile is who the account is.** Name, picture and description, shown at the top of every
 page. Its presence means the account uses unset.sh. Every field is optional.
 
 **A page is what the account shows.** It lists the cards to show, in order, and says who the page is meant for.

@@ -54,12 +54,9 @@ details shown with the page, and wherever you show the account outside the page,
 This is a request to apps, **not access control**. The records stay public on the network, and an app that
 ignores the field can still read them. Do not tell a person their page is private.
 
-The profile's `listed` is separate: `true` asks directories to list the account. Absent or `false` means it is
-not listed, though its pages are still reachable at their addresses.
-
 ## Unknown values
 
-Fields such as `width`, `surface`, `layout`, `fit`, `preset` and `avatarShape` name known values but accept other
+Fields such as `width`, `surface`, `layout`, `fit`, and `preset` name known values but accept other
 strings within their schema limits. Each field's description says what an absent or unknown value means,
 for example "absent or unknown means full". An unfamiliar value alone is not a validation error.
 

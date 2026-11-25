@@ -25,7 +25,7 @@ A profile uses the record key `self`. All its fields are optional:
 {
   "$type": "sh.unset.profile",
   "displayName": "Sam Rivera",
-  "headline": "Product designer. Maps, type and small tools.",
+  "description": "Product designer. Maps, type and small tools.",
   "createdAt": "2026-11-21T15:04:05.000Z"
 }
 ```

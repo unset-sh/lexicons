@@ -7,7 +7,7 @@ uploaded media.
 | Example | Contents |
 | --- | --- |
 | [Minimal profile](sh/unset/profile/minimal.json) | Profile with an optional creation time |
-| [Full profile](sh/unset/profile/full.json) | Name, headline, picture and account details |
+| [Full profile](sh/unset/profile/full.json) | Name, picture and description |
 | [Minimal page](sh/unset/page/minimal.json) | Page with an optional creation time and no cards |
 | [Main page](sh/unset/page/main.json) | Ordered references to five cards |
 | [Text card](sh/unset/card/text.json) | Markdown text |
