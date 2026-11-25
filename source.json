@@ -29,7 +29,8 @@
     },
     "lexicons/sh/unset/block/defs.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.defs.json",
-      "sha256": "b454fa27b0a994c2c2b04a13b9d11afd4eee3214e2a1af9a073fa383c0b1d0fb"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): descriptions reworded so blocks are not tied to cards. This repository is its source from then on.",
+      "sha256": "9d7939d3d43846dc8f4f7851c1f8a1f4a26522dfe6184f977f7bbecc88564314"
     },
     "lexicons/sh/unset/block/images.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.images.json",
