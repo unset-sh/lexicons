@@ -9,6 +9,9 @@ This repository owns its reader documentation, examples and standalone checks. T
 the schema definitions under `shared/lexicons/schemas/` in
 [Undefined6799/unset](https://github.com/Undefined6799/unset).
 
+A schema with `editedHere` in `source.json` (today the `sh.unset.actor` group) is maintained here directly: change it in a
+pull request to this repository and update its hash.
+
 Propose schema changes here or in the application repository. Coordinate the application change first, then
 import its merged schema bytes and update `source.json` in a pull request here. Keep documentation changes made
 here when refreshing the snapshot. Synchronization is manual; no workflow currently overwrites this repository.

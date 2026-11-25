@@ -8,7 +8,7 @@ weight: 6
 
 ## Overview
 
-Each item has a title and may add a short tag, a description, a link and a picture. Only the title is required,
+Each item has a title and may add a short tag, a description, a link and a image. Only the title is required,
 so an item can be as small as one line.
 
 ## Schema
@@ -18,7 +18,7 @@ so an item can be as small as one line.
 | --- | --- | --- | --- | --- |
 | `title` | string | No | 100 graphemes; 1,000 bytes | Heading shown above the items. |
 | `layout` | string | No | 32 bytes; known values: `list`, `carousel`, `grid` | How readers arrange the items. Absent or unknown means carousel. |
-| `items` | array of `#item` | Yes | up to 50 items | In display order. |
+| `items` | array of `#item` | Yes | up to 15 items | In display order. |
 <!-- /schema -->
 
 ### Item
@@ -30,17 +30,17 @@ so an item can be as small as one line.
 | `tag` | string | No | 40 graphemes; 400 bytes | Short label shown above the title, such as a year or a kind. |
 | `description` | string | No | 300 graphemes; 3,000 bytes | A few lines about the item. |
 | `uri` | string (uri) | No | 2,000 bytes | Where the item leads. An http or https URL; readers ignore any other scheme. |
-| `image` | `sh.unset.block.defs#image` | No |  | A picture shown with the item, in its own proportions. |
+| `image` | `sh.unset.block.defs#image` | No |  | An image shown with the item, in its own proportions. |
 <!-- /schema -->
 
-The picture uses the shared [`sh.unset.block.defs#image`](block-defs.md) shape.
+The image uses the shared [`sh.unset.block.defs#image`](block-defs.md) shape.
 
 ## Example
 
-<!-- example:examples/sh/unset/card/showcase.json -->
+<!-- example:examples/sh/unset/actor/card/showcase.json -->
 ```json
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.showcase",
     "title": "Projects",
@@ -83,7 +83,7 @@ The picture uses the shared [`sh.unset.block.defs#image`](block-defs.md) shape.
 ## Writing a showcase
 
 - Keep `tag` short: a year, or a kind such as "Talk".
-- Give every picture alt text and its proportions. Both are required.
+- Give every image alt text and its proportions. Both are required.
 - Order `items` the way they should appear.
 
 ## Reading a showcase
@@ -91,12 +91,12 @@ The picture uses the shared [`sh.unset.block.defs#image`](block-defs.md) shape.
 - Treat an absent or unknown `layout` as `carousel`.
 - Use an item's `uri` only if it is an `http` or `https` URL. An item without a usable link is still shown, as
   plain content.
-- Show each picture in its own proportions, and follow the picture rules in
+- Show each image in its own proportions, and follow the image rules in
   [shared definitions](block-defs.md).
 - Hide the block when it has no items.
 
 ## Related
 
-- [Images block](block-images.md): for pictures without titles and links.
+- [Gallery block](block-gallery.md): for images without titles and links.
 - [Shared definitions](block-defs.md)
 - [Card lexicon](card.md)

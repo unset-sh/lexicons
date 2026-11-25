@@ -1,0 +1,39 @@
+{
+  "lexicon": 1,
+  "id": "sh.unset.actor.profile",
+  "defs": {
+    "main": {
+      "type": "record",
+      "key": "literal:self",
+      "description": "Who an account is on unset.sh: the name, picture and description shown at the top of its pages. One per account; its presence means the account uses unset.sh, and deleting it removes the account's pages from readers. How the profile looks is not part of it. The cards shown are in sh.unset.actor.page.",
+      "record": {
+        "type": "object",
+        "properties": {
+          "displayName": {
+            "type": "string",
+            "maxGraphemes": 64,
+            "maxLength": 640,
+            "description": "Name shown at the top of the page. Absent means readers show the handle."
+          },
+          "avatar": {
+            "type": "blob",
+            "accept": ["image/png", "image/jpeg"],
+            "maxSize": 1000000,
+            "description": "Profile picture. Readers never hand it to a browser without checking its type and re-encoding it; the declared type may be wrong."
+          },
+          "description": {
+            "type": "string",
+            "maxGraphemes": 256,
+            "maxLength": 2560,
+            "description": "A few lines about the account, as plain text. Line breaks are kept; nothing else in it is formatted or turned into a link."
+          },
+          "createdAt": {
+            "type": "string",
+            "format": "datetime",
+            "description": "When the profile was first created."
+          }
+        }
+      }
+    }
+  }
+}

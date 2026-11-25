@@ -8,8 +8,8 @@ weight: 5
 
 ## Overview
 
-Each link has an address and, optionally, a label and a one-line description. The reader supplies the icon and
-the site name from its own list of known sites.
+Each link has an address and, optionally, a label, a one-line description and a small icon uploaded with it. Without
+an icon, the reader uses its own icon for a known site.
 
 ## Schema
 
@@ -18,7 +18,7 @@ the site name from its own list of known sites.
 | --- | --- | --- | --- | --- |
 | `title` | string | No | 100 graphemes; 1,000 bytes | Heading shown above the links. |
 | `layout` | string | No | 32 bytes; known values: `list`, `carousel`, `grid` | How readers arrange the links. Absent or unknown means list. |
-| `items` | array of `#link` | Yes | up to 50 items | In display order. |
+| `items` | array of `#link` | Yes | up to 20 items | In display order. |
 <!-- /schema -->
 
 ### Link
@@ -29,14 +29,15 @@ the site name from its own list of known sites.
 | `uri` | string (uri) | Yes | 2,000 bytes | An http or https URL. Readers ignore any other scheme. |
 | `label` | string | No | 100 graphemes; 1,000 bytes | Text shown for the link. When present it is shown, even if the URL names an account; when absent, readers show the account or site name. |
 | `description` | string | No | 200 graphemes; 2,000 bytes | One line about the link. |
+| `icon` | blob | No | `image/png`, `image/jpeg`, `image/webp`; up to 100,000 bytes | A small square icon for the link, uploaded with it. Readers check and re-encode it, and show it no larger than an icon. Absent: the reader's own icon for a known site, or none. |
 <!-- /schema -->
 
 ## Example
 
-<!-- example:examples/sh/unset/card/links.json -->
+<!-- example:examples/sh/unset/actor/card/links.json -->
 ```json
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.links",
     "title": "Elsewhere",
@@ -67,8 +68,9 @@ the site name from its own list of known sites.
 
 - Ignore a link whose address is not `http` or `https`.
 - Show `label` when it is present, even if the address names an account you recognise.
-- Take the icon and site name from your own list of known sites. Never fetch the linked site to find them: that
-  would tell the site who is viewing the page, and let it choose what your app shows.
+- Use the link's `icon` when present: check and re-encode it, and show it at icon size only. Otherwise take the
+  icon and site name from your own list of known sites. Never fetch the linked site to find them: that would tell
+  the site who is viewing the page, and let it choose what your app shows.
 - Treat an absent or unknown `layout` as `list`.
 - Hide the block when no link is left to show.
 

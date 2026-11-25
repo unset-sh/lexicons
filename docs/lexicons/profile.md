@@ -1,10 +1,10 @@
 ---
 title: "Profile lexicon"
-description: "sh.unset.profile: who an account is, shown at the top of its pages."
+description: "sh.unset.actor.profile: who an account is, shown at the top of its pages."
 weight: 1
 ---
 
-`sh.unset.profile` is who an account is on unset.sh: the name, picture and details shown at the top of its pages.
+`sh.unset.actor.profile` is who an account is on unset.sh: the name, picture and description shown at the top of its pages.
 
 ## Overview
 
@@ -13,22 +13,18 @@ unset.sh. Deleting it removes the account's pages from readers.
 
 Every field is optional. A profile with no fields is valid and shows the account's handle.
 
-The profile holds no cards. What a page shows, and who may see it, is in [`sh.unset.page`](page.md).
+The profile holds no cards and no styling. What a page shows, and who may see it, is in [`sh.unset.actor.page`](page.md).
 
 ## Schema
 
-<!-- schema:sh.unset.profile#main -->
+<!-- schema:sh.unset.actor.profile#main -->
 Record key: `literal:self`
 
 | Property | Type | Required | Limits | Description |
 | --- | --- | --- | --- | --- |
 | `displayName` | string | No | 64 graphemes; 640 bytes | Name shown at the top of the page. Absent means readers show the handle. |
-| `headline` | string | No | 200 graphemes; 2,000 bytes | One line shown under the name. |
-| `avatar` | blob | No | `image/*`; up to 2,000,000 bytes | Profile picture. Readers crop it to a square. |
-| `avatarShape` | string | No | 32 bytes; known values: `round`, `rounded-square` | How readers crop the avatar. Absent or unknown means round. |
-| `location` | string | No | 100 graphemes; 1,000 bytes | A place, as free text the member writes. Not a precise location. |
-| `website` | string (uri) | No | 2,000 bytes | The member's website. An http or https URL; readers ignore any other scheme. |
-| `listed` | boolean | No |  | True asks directories to list the account. Absent or false means not listed; its pages are still reachable at their addresses. |
+| `avatar` | blob | No | `image/png`, `image/jpeg`; up to 1,000,000 bytes | Profile picture. Readers never hand it to a browser without checking its type and re-encoding it; the declared type may be wrong. |
+| `description` | string | No | 256 graphemes; 2,560 bytes | A few lines about the account, as plain text. Line breaks are kept; nothing else in it is formatted or turned into a link. |
 | `createdAt` | string (datetime) | No |  | When the profile was first created. |
 <!-- /schema -->
 
@@ -36,10 +32,10 @@ Record key: `literal:self`
 
 A minimal profile with a creation time:
 
-<!-- example:examples/sh/unset/profile/minimal.json -->
+<!-- example:examples/sh/unset/actor/profile/minimal.json -->
 ```json
 {
-  "$type": "sh.unset.profile",
+  "$type": "sh.unset.actor.profile",
   "createdAt": "2026-11-21T15:04:05.000Z"
 }
 ```
@@ -47,12 +43,11 @@ A minimal profile with a creation time:
 
 A complete profile:
 
-<!-- example:examples/sh/unset/profile/full.json -->
+<!-- example:examples/sh/unset/actor/profile/full.json -->
 ```json
 {
-  "$type": "sh.unset.profile",
+  "$type": "sh.unset.actor.profile",
   "displayName": "Sam Rivera",
-  "headline": "Product designer. Maps, type and small tools.",
   "avatar": {
     "$type": "blob",
     "ref": {
@@ -61,10 +56,7 @@ A complete profile:
     "mimeType": "image/jpeg",
     "size": 184223
   },
-  "avatarShape": "rounded-square",
-  "location": "Lisbon",
-  "website": "https://example.com",
-  "listed": true,
+  "description": "Product designer in Lisbon.\nMaps, type and small tools.",
   "createdAt": "2026-11-21T15:04:05.000Z"
 }
 ```
@@ -72,7 +64,7 @@ A complete profile:
 
 ## View the lexicon
 
-[`lexicons/sh/unset/profile.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/profile.json)
+[`lexicons/sh/unset/actor/profile.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/actor/profile.json)
 
 ## Writing a profile
 
@@ -80,17 +72,17 @@ A complete profile:
 - Keep fields you do not know when you save, so you do not erase what a newer app wrote.
 - Protect edits with the record's previous CID (`swapRecord` on `putRecord`) so you do not overwrite a
   concurrent edit. Use `swapRecord: null` when creating a profile that must not already exist.
-- Set `listed` only when the person asks to appear in directories.
 
 ## Reading a profile
 
 - Validate the record before using it. A missing or invalid profile shows no page.
 - Show the handle when `displayName` is absent.
-- Crop the avatar to a square, then to the shape in `avatarShape`. Absent or unknown means round.
-- Use `website` only if it is an `http` or `https` URL.
+- Check the avatar's real type and re-encode it before showing it; the declared type may be wrong.
+- Show `description` as plain text with its line breaks. Do not render Markdown or HTML in it.
 - Show the profile's details only to people the main page's `visibility` allows. See
   [Reading a page](../reading-a-page.md).
-- An older profile may carry `cards` or `visibility` fields from an earlier draft. Ignore them.
+- An older profile may carry fields from an earlier draft, such as `cards`, `visibility`, `headline`,
+  `avatarShape`, `location`, `website` or `listed`. Ignore them.
 
 ## Related
 

@@ -4,7 +4,7 @@ description: "The permission set an app asks for to write a profile, its pages a
 weight: 30
 ---
 
-An app that writes a profile, its pages and their cards asks for one permission set, `sh.unset.authFull`.
+An app that writes a profile, its pages and their cards asks for one permission set, `sh.unset.actor.authProfile`.
 
 ## Overview
 
@@ -12,10 +12,12 @@ AT Protocol OAuth grants an app access to named resources in a person's account.
 [permission set](https://atproto.com/specs/permission#permission-sets) bundles the permissions for one family of
 lexicons under a name, with a title and a description the person sees on the consent screen.
 
-## Full access
+## Profile access
 
-`sh.unset.authFull` covers everything needed to create and edit a profile, its pages and their cards, and nothing
-else in the account.
+`sh.unset.actor.authProfile` covers everything needed to create and edit a profile, its pages and their cards, and nothing
+else in the account. A permission set can only grant records in its own group or the groups below it
+([Permissions](https://atproto.com/specs/permission#permission-sets)), so this set can never reach records outside
+`sh.unset.actor`. Other unset.sh features get their own set in their own group.
 
 The person sees:
 
@@ -27,17 +29,17 @@ The person sees:
 When the set is published and resolvable, include it in the OAuth scope:
 
 ```text
-atproto include:sh.unset.authFull
+atproto include:sh.unset.actor.authProfile
 ```
 
 ### What it grants
 
-<!-- schema:sh.unset.authFull#main -->
+<!-- schema:sh.unset.actor.authProfile#main -->
 | Name | Grants |
 | --- | --- |
-| `sh.unset.profile` | Records: create, update, delete |
-| `sh.unset.page` | Records: create, update, delete |
-| `sh.unset.card` | Records: create, update, delete |
+| `sh.unset.actor.profile` | Records: create, update, delete |
+| `sh.unset.actor.page` | Records: create, update, delete |
+| `sh.unset.actor.card` | Records: create, update, delete |
 <!-- /schema -->
 
 Blocks are not listed because a block is not a record. It is stored inside a card.
@@ -49,7 +51,7 @@ A permission set cannot include blob uploads; an app must request them directly
 adds a blob permission to its scope:
 
 ```text
-atproto include:sh.unset.authFull blob:image/*
+atproto include:sh.unset.actor.authProfile blob:image/*
 ```
 
 ## Reading needs no permission
@@ -63,7 +65,7 @@ The imported source records no publication of the set. Its live resolution state
 Clients can request the same repository access directly, without resolving a permission set:
 
 ```text
-atproto repo:sh.unset.profile repo:sh.unset.page repo:sh.unset.card
+atproto repo:sh.unset.actor.profile repo:sh.unset.actor.page repo:sh.unset.actor.card
 ```
 
 Add `blob:image/*` when uploading pictures. If an authorization request using `include:` fails because the set
@@ -81,4 +83,4 @@ authorize a permission change or publish the set.
 ## Related
 
 - [Quick start](quick-start.md)
-- [`sh.unset.profile`](lexicons/profile.md), [`sh.unset.page`](lexicons/page.md) and [`sh.unset.card`](lexicons/card.md)
+- [`sh.unset.actor.profile`](lexicons/profile.md), [`sh.unset.actor.page`](lexicons/page.md) and [`sh.unset.actor.card`](lexicons/card.md)

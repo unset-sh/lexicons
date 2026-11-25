@@ -17,6 +17,9 @@ does not update this repository automatically.
 - `schemas`: each local schema's original `sourcePath` and SHA-256 of the copied file bytes.
 - `documentationCommit`: the starting point for the imported documentation, which has been adapted here.
 
+A schema changed here after the import carries `editedHere` with the date and reason; this repository is its
+source from then on, and its `sha256` is of the file as changed here. The `sh.unset.actor` group is the first.
+
 Use those values to compare the local schemas with that exact upstream commit. A matching hash checks the
 local file against the recorded import; it does not prove network publication or approval of a future change.
 

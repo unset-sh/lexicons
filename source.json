@@ -3,9 +3,25 @@
   "commit": "7b3333ed48af1f5c32a49e0e15a8b9462fef67d6",
   "documentationCommit": "3134b3fa43ec6d5ce7bb6c34af705828795ae589",
   "schemas": {
-    "lexicons/sh/unset/authFull.json": {
+    "lexicons/sh/unset/actor/authProfile.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.authFull.json",
-      "sha256": "b71dffdf5a893f6d1bebd0b5317a5d04f311ff8e902355b1df05e8b961373248"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): moved into the sh.unset.actor group and renamed from sh.unset.authFull. This repository is its source from then on.",
+      "sha256": "5bae99422aadb764a39f874ff5bdfec7051a746292fb6904b7030b23073206d5"
+    },
+    "lexicons/sh/unset/actor/card.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.card.json",
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): moved into the sh.unset.actor group. This repository is its source from then on.",
+      "sha256": "5cb851f1ab054592e21e49027267202799b5058ed679cf741b71f4517b1d9e63"
+    },
+    "lexicons/sh/unset/actor/page.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.page.json",
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): moved into the sh.unset.actor group. This repository is its source from then on.",
+      "sha256": "e434ca2aa81a39a46d9ec7e8e16af249a107e90c2dcd2beccadf8ba1799453f8"
+    },
+    "lexicons/sh/unset/actor/profile.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.profile.json",
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): moved into the sh.unset.actor group; fields reduced to displayName, avatar, description and createdAt. This repository is its source from then on.",
+      "sha256": "0b551b845d787917f5e260cd1a370f7de8b5b2ad1e1525876607bd98db6a6789"
     },
     "lexicons/sh/unset/block/buttons.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.buttons.json",
@@ -13,35 +29,27 @@
     },
     "lexicons/sh/unset/block/defs.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.defs.json",
-      "sha256": "b454fa27b0a994c2c2b04a13b9d11afd4eee3214e2a1af9a073fa383c0b1d0fb"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): descriptions reworded so blocks are not tied to cards, and pictures are called images. This repository is its source from then on.",
+      "sha256": "f99148782d2e35a015e7179347c01a00691ed669f3b065f76705bc3e2b62790c"
     },
-    "lexicons/sh/unset/block/images.json": {
+    "lexicons/sh/unset/block/gallery.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.images.json",
-      "sha256": "59b12b9b2cf516a14bac0f9e15b27ec5485d6833c4945c9efeb7e30ed3d27ec2"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): renamed from sh.unset.block.images to sh.unset.block.gallery, up to 100 images. This repository is its source from then on.",
+      "sha256": "b8f8d20ca6bae1c75be408d99ba56168c8d48dabfb673266208c0f52d1832ea3"
     },
     "lexicons/sh/unset/block/links.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.links.json",
-      "sha256": "94422b277881aec14d52d18997e08a985b65b9206d9f65d216e46e53c88e0820"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): up to 20 links, each with an optional uploaded icon. This repository is its source from then on.",
+      "sha256": "de8dbeaf980f8fd213177cdd38c4ddfe7ba6757498e57296d8abcb043ea2c26f"
     },
     "lexicons/sh/unset/block/showcase.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.showcase.json",
-      "sha256": "b8a33742290a2033cc71c65ab1710d0cc1f0c52407982ac4216a43baf58c24e7"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): up to 15 items. This repository is its source from then on.",
+      "sha256": "1199fdb7bc5341ac08eeb50153d92cf3668e073aba830d8e387c7a14da9c9dea"
     },
     "lexicons/sh/unset/block/text.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.text.json",
       "sha256": "5460ba967a0ea92991b8c6c2ed1129998e5d03b096d2f2eb14c47d3a7d9c2c83"
-    },
-    "lexicons/sh/unset/card.json": {
-      "sourcePath": "shared/lexicons/schemas/sh.unset.card.json",
-      "sha256": "cecaeeeb5db992f03b97b11d9b701d0b19e1892ee2a018ade474870ccbd25987"
-    },
-    "lexicons/sh/unset/page.json": {
-      "sourcePath": "shared/lexicons/schemas/sh.unset.page.json",
-      "sha256": "79e6fdea38c7e3ebb3b35783f2fe47a6a2195f4c1944007b5d35fa0a37bdbb75"
-    },
-    "lexicons/sh/unset/profile.json": {
-      "sourcePath": "shared/lexicons/schemas/sh.unset.profile.json",
-      "sha256": "19ec531c273812f0b35438fe42fc4f4e4b7e38abfa3bd285a327975d96b6a588"
     }
   }
 }

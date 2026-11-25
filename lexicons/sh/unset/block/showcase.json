@@ -21,7 +21,7 @@
         },
         "items": {
           "type": "array",
-          "maxLength": 50,
+          "maxLength": 15,
           "items": {
             "type": "ref",
             "ref": "#item"
@@ -62,7 +62,7 @@
         "image": {
           "type": "ref",
           "ref": "sh.unset.block.defs#image",
-          "description": "A picture shown with the item, in its own proportions."
+          "description": "An image shown with the item, in its own proportions."
         }
       }
     }

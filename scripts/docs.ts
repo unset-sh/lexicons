@@ -1,10 +1,10 @@
 // Reference tables and examples are generated from the files so they cannot drift. A page marks a table with
 //
-//   <!-- schema:sh.unset.card#main -->
+//   <!-- schema:sh.unset.actor.card#main -->
 //   ...generated table...
 //   <!-- /schema -->
 //
-// and an example with `<!-- example:examples/sh/unset/card/text.json -->` and `<!-- /example -->`.
+// and an example with `<!-- example:examples/sh/unset/actor/card/text.json -->` and `<!-- /example -->`.
 // `bun run docs` fills every block; `bun run check` detects drift and undocumented definitions.
 import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";

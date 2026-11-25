@@ -79,10 +79,10 @@ around it changes, and it can never land on other words.
 
 ## Example
 
-<!-- example:examples/sh/unset/card/text.json -->
+<!-- example:examples/sh/unset/actor/card/text.json -->
 ```json
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.text",
     "text": "## About\n\nI design maps and the tools around them. Before that I set type for a small press.\n\n- Open to freelance work from March\n- Talks and workshops on request\n\nRead more on [my site](https://example.com/about)."
@@ -97,10 +97,10 @@ around it changes, and it can never land on other words.
 This card keeps the Markdown as written. It shows lines between columns, hides one side between the two body
 rows in the first column, and centres the paragraph.
 
-<!-- example:examples/sh/unset/card/text-looks.json -->
+<!-- example:examples/sh/unset/actor/card/text-looks.json -->
 ```json
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.text",
     "text": "## Opening hours\n\nWe are open on weekdays.\n\n| Day | Hours |\n| --- | --- |\n| Mon | 9-17 |\n| Tue | 9-17 |",
@@ -155,7 +155,7 @@ rows in the first column, and centres the paragraph.
 - Do not rely on raw HTML. Readers never render it.
 - Link only to `http` and `https` addresses. Other links are dropped.
 - Do not rely on a picture in the text being shown inline. Each reader decides. For pictures that must show, use
-  the [images block](block-images.md).
+  the [images block](block-gallery.md).
 
 ## Reading text
 

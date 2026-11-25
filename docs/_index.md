@@ -17,29 +17,29 @@ the pages belong to them and any app can read them.
 
 | Lexicon | Kind | What it is |
 | --- | --- | --- |
-| [`sh.unset.profile`](lexicons/profile.md) | Record | Who the account is: name, headline, picture and details. One per account. |
-| [`sh.unset.page`](lexicons/page.md) | Record | One page: the cards it shows, in order, and who it is meant for. The main page is `self`. |
-| [`sh.unset.card`](lexicons/card.md) | Record | One card. It holds exactly one block. |
+| [`sh.unset.actor.profile`](lexicons/profile.md) | Record | Who the account is: name, picture and description. One per account. |
+| [`sh.unset.actor.page`](lexicons/page.md) | Record | One page: the cards it shows, in order, and who it is meant for. The main page is `self`. |
+| [`sh.unset.actor.card`](lexicons/card.md) | Record | One card. It holds exactly one block. |
 | [`sh.unset.block.text`](lexicons/block-text.md) | Block | Formatted text, written in Markdown. |
 | [`sh.unset.block.links`](lexicons/block-links.md) | Block | A set of links, such as accounts on other sites. |
 | [`sh.unset.block.showcase`](lexicons/block-showcase.md) | Block | Titled items such as projects, writing or talks. |
 | [`sh.unset.block.buttons`](lexicons/block-buttons.md) | Block | A short pitch with up to five buttons. |
-| [`sh.unset.block.images`](lexicons/block-images.md) | Block | One picture, or a small set shown together. |
-| [`sh.unset.block.defs`](lexicons/block-defs.md) | Shared definitions | The picture shape the blocks share. |
-| [`sh.unset.authFull`](permissions.md) | Permission set | What an app asks for to write a profile, its pages and their cards. |
+| [`sh.unset.block.gallery`](lexicons/block-gallery.md) | Block | One image, or a gallery of up to 100. |
+| [`sh.unset.block.defs`](lexicons/block-defs.md) | Shared definitions | The image shape the blocks share. |
+| [`sh.unset.actor.authProfile`](permissions.md) | Permission set | What an app asks for to write a profile, its pages and their cards. |
 
 ```text
-sh.unset.profile                 who the account is, shown at the top of its pages
-sh.unset.page (self)             the main page
+sh.unset.actor.profile                 who the account is, shown at the top of its pages
+sh.unset.actor.page (self)             the main page
 └── cards                        ordered list of at:// addresses
-    └── sh.unset.card            one card
+    └── sh.unset.actor.card            one card
         └── content              one block
-            └── sh.unset.block.* text, links, showcase, buttons or images
+            └── sh.unset.block.* text, links, showcase, buttons or gallery
 ```
 
 ## How it fits together
 
-**The profile is who the account is.** Name, headline, picture, location and website, shown at the top of every
+**The profile is who the account is.** Name, picture and description, shown at the top of every
 page. Its presence means the account uses unset.sh. Every field is optional.
 
 **A page is what the account shows.** It lists the cards to show, in order, and says who the page is meant for.
@@ -78,7 +78,7 @@ third-party adoption also establishes compatibility obligations.
 3. [Permissions](permissions.md): the OAuth scope to request.
 4. The lexicons: [profile](lexicons/profile.md), [page](lexicons/page.md), [card](lexicons/card.md), and the
    blocks ([text](lexicons/block-text.md), [links](lexicons/block-links.md), [showcase](lexicons/block-showcase.md),
-   [buttons](lexicons/block-buttons.md), [images](lexicons/block-images.md), [shared definitions](lexicons/block-defs.md)).
+   [buttons](lexicons/block-buttons.md), [gallery](lexicons/block-gallery.md), [shared definitions](lexicons/block-defs.md)).
 5. [Examples](https://github.com/unset-sh/lexicons/blob/main/examples/README.md): nine sample records.
 6. [Publication and compatibility](publication.md) and [Maintenance](maintenance.md).
 7. [FAQ](faq.md).

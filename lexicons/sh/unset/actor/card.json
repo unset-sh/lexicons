@@ -1,11 +1,11 @@
 {
   "lexicon": 1,
-  "id": "sh.unset.card",
+  "id": "sh.unset.actor.card",
   "defs": {
     "main": {
       "type": "record",
       "key": "tid",
-      "description": "One card on an account's unset.sh profile page. It is shown only on a page (sh.unset.page) whose cards list names it, in that order, and a block with nothing to show (an empty list, for example) is hidden. Readers apply that page's visibility to it.",
+      "description": "One card on an account's unset.sh profile page. It is shown only on a page (sh.unset.actor.page) whose cards list names it, in that order, and a block with nothing to show (an empty list, for example) is hidden. Readers apply that page's visibility to it.",
       "record": {
         "type": "object",
         "required": ["content"],
@@ -17,7 +17,7 @@
               "sh.unset.block.links",
               "sh.unset.block.showcase",
               "sh.unset.block.buttons",
-              "sh.unset.block.images"
+              "sh.unset.block.gallery"
             ],
             "description": "What the card holds: one of the sh.unset.block types. Other apps may add their own types; readers hide types they do not know."
           },

@@ -1,5 +1,5 @@
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.showcase",
     "title": "Projects",

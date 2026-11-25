@@ -55,10 +55,10 @@ A `preset` says what the button is for, so each reader can word it in the viewer
 
 ## Example
 
-<!-- example:examples/sh/unset/card/buttons.json -->
+<!-- example:examples/sh/unset/actor/card/buttons.json -->
 ```json
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.buttons",
     "heading": "Work with me",

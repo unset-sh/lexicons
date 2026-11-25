@@ -13,24 +13,24 @@ are available under the [MIT licence](LICENSE).
 profile (self)       identity and profile details
 page (self)          main page, visibility and ordered card references
   card               one block, with optional width and surface
-    block            text, links, showcase, buttons or images
+    block            text, links, showcase, buttons or gallery
 ```
 
 | Lexicon | Purpose | Reference |
 | --- | --- | --- |
-| `sh.unset.profile` | Account identity, at record key `self` | [Profile](docs/lexicons/profile.md) |
-| `sh.unset.page` | A page's card order and visibility; `self` is the main page | [Page](docs/lexicons/page.md) |
-| `sh.unset.card` | One block and its presentation | [Card](docs/lexicons/card.md) |
+| `sh.unset.actor.profile` | Account identity, at record key `self` | [Profile](docs/lexicons/profile.md) |
+| `sh.unset.actor.page` | A page's card order and visibility; `self` is the main page | [Page](docs/lexicons/page.md) |
+| `sh.unset.actor.card` | One block and its presentation | [Card](docs/lexicons/card.md) |
 | `sh.unset.block.text` | Markdown text | [Text](docs/lexicons/block-text.md) |
 | `sh.unset.block.links` | Links to accounts or other sites | [Links](docs/lexicons/block-links.md) |
 | `sh.unset.block.showcase` | Titled projects, writing or other entries | [Showcase](docs/lexicons/block-showcase.md) |
 | `sh.unset.block.buttons` | A heading and email or link buttons | [Buttons](docs/lexicons/block-buttons.md) |
-| `sh.unset.block.images` | Pictures with alt text | [Images](docs/lexicons/block-images.md) |
+| `sh.unset.block.gallery` | Images with alt text | [Gallery](docs/lexicons/block-gallery.md) |
 | `sh.unset.block.defs` | Shared image and aspect ratio definitions | [Shared definitions](docs/lexicons/block-defs.md) |
-| `sh.unset.authFull` | OAuth permissions for these three record collections | [Permissions](docs/permissions.md) |
+| `sh.unset.actor.authProfile` | OAuth permissions for these three record collections | [Permissions](docs/permissions.md) |
 
-The JSON files live in [`lexicons/`](lexicons/), using their NSID as a path: `sh.unset.card` becomes
-`lexicons/sh/unset/card.json`. Blocks are objects inside a card, not separate repository records.
+The JSON files live in [`lexicons/`](lexicons/), using their NSID as a path: `sh.unset.actor.card` becomes
+`lexicons/sh/unset/actor/card.json`. Blocks are objects inside a card, not separate repository records.
 
 Records are public on the AT Protocol network. A page's `visibility` asks apps to restrict display; it does
 not make its records confidential. Read the [reader rules](docs/reading-a-page.md) before implementing them.

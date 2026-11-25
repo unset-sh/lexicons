@@ -6,8 +6,8 @@ import { test } from "node:test";
 import { checkRepository } from "./check.ts";
 
 const ROOT = join(import.meta.dirname, "..");
-const card = "lexicons/sh/unset/card.json";
-const sample = "examples/sh/unset/card/text.json";
+const card = "lexicons/sh/unset/actor/card.json";
+const sample = "examples/sh/unset/actor/card/text.json";
 
 function copyRepository(root: string) {
   for (const name of ["lexicons", "examples", "docs"])
@@ -90,7 +90,10 @@ test("rejects schema bytes that differ from their source digest", async () => {
 });
 
 test("detects a missing schema from the imported inventory", async () => {
-  await fixture((root) => rmSync(join(root, "lexicons/sh/unset/authFull.json")), /schema inventory differs/);
+  await fixture(
+    (root) => rmSync(join(root, "lexicons/sh/unset/actor/authProfile.json")),
+    /schema inventory differs/,
+  );
 });
 
 test("validates nested required fields using freshly generated validators", async () => {
@@ -116,7 +119,7 @@ test("validates string length limits", async () => {
 test("decodes and checks blob CIDs rather than accepting arbitrary link text", async () => {
   await fixture(
     (root) =>
-      edit(root, "examples/sh/unset/profile/full.json", (s) => {
+      edit(root, "examples/sh/unset/actor/profile/full.json", (s) => {
         s.avatar.ref.$link = "not-a-cid";
       }),
     /full\.json: invalid example/,
@@ -126,7 +129,7 @@ test("decodes and checks blob CIDs rather than accepting arbitrary link text", a
 test("refuses unknown fields in nested authored examples", async () => {
   await fixture(
     (root) =>
-      edit(root, "examples/sh/unset/card/showcase.json", (s) => {
+      edit(root, "examples/sh/unset/actor/card/showcase.json", (s) => {
         s.content.items[0].image.aspectRatio.wdith = 4;
       }),
     /unknown.*wdith/,
@@ -136,7 +139,7 @@ test("refuses unknown fields in nested authored examples", async () => {
 test("detects a missing block example", async () => {
   await fixture((root) => {
     rmSync(join(root, sample));
-    rmSync(join(root, "examples/sh/unset/card/text-looks.json"));
+    rmSync(join(root, "examples/sh/unset/actor/card/text-looks.json"));
   }, /no example covers sh\.unset\.block\.text#main/);
 });
 

@@ -1,11 +1,11 @@
 {
   "lexicon": 1,
-  "id": "sh.unset.page",
+  "id": "sh.unset.actor.page",
   "defs": {
     "main": {
       "type": "record",
       "key": "any",
-      "description": "One page of an account on unset.sh: the cards it shows, in order, under the account's profile (sh.unset.profile). The page under the record key self is the account's main page, shown at its profile's address. An account may hold other pages under other keys; readers show none of them until they know where it goes. Deleting self leaves the profile shown to everyone, with no cards.",
+      "description": "One page of an account on unset.sh: the cards it shows, in order, under the account's profile (sh.unset.actor.profile). The page under the record key self is the account's main page, shown at its profile's address. An account may hold other pages under other keys; readers show none of them until they know where it goes. Deleting self leaves the profile shown to everyone, with no cards.",
       "record": {
         "type": "object",
         "properties": {
@@ -40,7 +40,7 @@
         "uri": {
           "type": "string",
           "format": "at-uri",
-          "description": "at:// address of an sh.unset.card record, written with the DID. Readers accept only a card record in this page's own repository, named by that DID, and skip any other entry (a handle-form address, another account, another kind of record)."
+          "description": "at:// address of an sh.unset.actor.card record, written with the DID. Readers accept only a card record in this page's own repository, named by that DID, and skip any other entry (a handle-form address, another account, another kind of record)."
         }
       }
     }

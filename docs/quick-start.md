@@ -10,7 +10,7 @@ the surrounding XRPC request also needs the account's DID and the collection and
 ## What you need
 
 - An AT Protocol account and its DID.
-- An OAuth session that may write `sh.unset.profile`, `sh.unset.page` and `sh.unset.card`.
+- An OAuth session that may write `sh.unset.actor.profile`, `sh.unset.actor.page` and `sh.unset.actor.card`.
   [Permissions](permissions.md) gives granular scopes that do not depend on resolving a permission set.
 - A copy of these schemas to validate records locally.
 
@@ -23,14 +23,14 @@ A profile uses the record key `self`. All its fields are optional:
 
 ```json
 {
-  "$type": "sh.unset.profile",
+  "$type": "sh.unset.actor.profile",
   "displayName": "Sam Rivera",
-  "headline": "Product designer. Maps, type and small tools.",
+  "description": "Product designer. Maps, type and small tools.",
   "createdAt": "2026-11-21T15:04:05.000Z"
 }
 ```
 
-For a new profile, call `com.atproto.repo.putRecord` with collection `sh.unset.profile`, `rkey: "self"` and
+For a new profile, call `com.atproto.repo.putRecord` with collection `sh.unset.actor.profile`, `rkey: "self"` and
 `swapRecord: null`. The null precondition refuses to replace an existing record. If a profile already exists,
 keep it; to edit it, merge your changes into its current value and pass its CID as `swapRecord`.
 
@@ -40,7 +40,7 @@ A card holds one block in `content`. The block names its type in `$type`:
 
 ```json
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.text",
     "text": "## About\n\nI design maps and the tools around them."
@@ -49,13 +49,13 @@ A card holds one block in `content`. The block names its type in `$type`:
 }
 ```
 
-A card shows only when a page names it. The main page is `sh.unset.page/self`. Its card addresses use the
+A card shows only when a page names it. The main page is `sh.unset.actor.page/self`. Its card addresses use the
 account's DID, never its handle:
 
 ```json
 {
-  "$type": "sh.unset.page",
-  "cards": [{ "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.card/3lzh2a2c3d4e2" }],
+  "$type": "sh.unset.actor.page",
+  "cards": [{ "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.actor.card/3lzh2a2c3d4e2" }],
   "createdAt": "2026-11-21T15:05:00.000Z"
 }
 ```
@@ -64,7 +64,7 @@ This sample creates a public page: absent `visibility` means public. Choose the 
 [visibility](reading-a-page.md#who-sees-the-page) before writing it.
 
 Write the card and page in one `com.atproto.repo.applyWrites` call with two `create` operations: one in
-`sh.unset.card` with your new TID, and one in `sh.unset.page` with `rkey: "self"`. The PDS commits both
+`sh.unset.actor.card` with your new TID, and one in `sh.unset.actor.page` with `rkey: "self"`. The PDS commits both
 operations atomically. If a page already exists, use the update procedure below instead of replacing it with
 this sample.
 
@@ -78,10 +78,10 @@ the sample DID everywhere and use your new TID in both the card's `rkey` and the
   "writes": [
     {
       "$type": "com.atproto.repo.applyWrites#create",
-      "collection": "sh.unset.card",
+      "collection": "sh.unset.actor.card",
       "rkey": "3lzh2a2c3d4e2",
       "value": {
-        "$type": "sh.unset.card",
+        "$type": "sh.unset.actor.card",
         "content": {
           "$type": "sh.unset.block.text",
           "text": "## About\n\nI design maps and the tools around them."
@@ -91,12 +91,12 @@ the sample DID everywhere and use your new TID in both the card's `rkey` and the
     },
     {
       "$type": "com.atproto.repo.applyWrites#create",
-      "collection": "sh.unset.page",
+      "collection": "sh.unset.actor.page",
       "rkey": "self",
       "value": {
-        "$type": "sh.unset.page",
+        "$type": "sh.unset.actor.page",
         "cards": [
-          { "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.card/3lzh2a2c3d4e2" }
+          { "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.actor.card/3lzh2a2c3d4e2" }
         ],
         "createdAt": "2026-11-21T15:05:00.000Z"
       }
@@ -108,7 +108,7 @@ the sample DID everywhere and use your new TID in both the card's `rkey` and the
 ### Editing an existing page
 
 1. Read the repository's head CID with `com.atproto.sync.getLatestCommit` **before** fetching the current page.
-2. Read and validate `sh.unset.page/self`. A failed read is not permission to create a replacement.
+2. Read and validate `sh.unset.actor.page/self`. A failed read is not permission to create a replacement.
 3. Merge the intended edit into the stored value. Preserve `visibility`, `createdAt`, existing card references
    and every unknown field or reference you are not deliberately changing. Append the new card reference once.
 4. Validate the merged page and card, then send a single `applyWrites` request: `create` for the new card,
@@ -144,12 +144,12 @@ This is an illustrative image value. Its CID is syntactically valid but does not
 ```
 
 Replace the whole `image` object with the upload response. Set `alt` and `aspectRatio` for the actual picture;
-an empty `alt` marks a decorative image. See the [images block](lexicons/block-images.md) for a complete card.
+an empty `alt` marks a decorative image. See the [images block](lexicons/block-gallery.md) for a complete card.
 
 ## 4. Read the page
 
-1. Fetch and validate `sh.unset.profile/self`. A missing or invalid profile shows no page.
-2. Fetch and validate `sh.unset.page/self`. Confirmed absence shows the profile's header with no cards.
+1. Fetch and validate `sh.unset.actor.profile/self`. A missing or invalid profile shows no page.
+2. Fetch and validate `sh.unset.actor.page/self`. Confirmed absence shows the profile's header with no cards.
    An invalid page or failed fetch must not be interpreted as a public page.
 3. Apply the page's visibility before showing its details. Fetch only valid card references to this account's
    own repository, in list order, showing each once.
