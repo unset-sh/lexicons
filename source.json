@@ -3,9 +3,25 @@
   "commit": "7b3333ed48af1f5c32a49e0e15a8b9462fef67d6",
   "documentationCommit": "3134b3fa43ec6d5ce7bb6c34af705828795ae589",
   "schemas": {
-    "lexicons/sh/unset/authFull.json": {
+    "lexicons/sh/unset/actor/authProfile.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.authFull.json",
-      "sha256": "b71dffdf5a893f6d1bebd0b5317a5d04f311ff8e902355b1df05e8b961373248"
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): moved into the sh.unset.actor group and renamed from sh.unset.authFull. This repository is its source from then on.",
+      "sha256": "5bae99422aadb764a39f874ff5bdfec7051a746292fb6904b7030b23073206d5"
+    },
+    "lexicons/sh/unset/actor/card.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.card.json",
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): moved into the sh.unset.actor group. This repository is its source from then on.",
+      "sha256": "bab5caaa4b075897d0ee3a593d555c140bfffe7228f3a382dd21d7e6f77e5e6d"
+    },
+    "lexicons/sh/unset/actor/page.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.page.json",
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): moved into the sh.unset.actor group. This repository is its source from then on.",
+      "sha256": "e434ca2aa81a39a46d9ec7e8e16af249a107e90c2dcd2beccadf8ba1799453f8"
+    },
+    "lexicons/sh/unset/actor/profile.json": {
+      "sourcePath": "shared/lexicons/schemas/sh.unset.profile.json",
+      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex): moved into the sh.unset.actor group; fields reduced to displayName, avatar, description and createdAt. This repository is its source from then on.",
+      "sha256": "0b551b845d787917f5e260cd1a370f7de8b5b2ad1e1525876607bd98db6a6789"
     },
     "lexicons/sh/unset/block/buttons.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.buttons.json",
@@ -30,19 +46,6 @@
     "lexicons/sh/unset/block/text.json": {
       "sourcePath": "shared/lexicons/schemas/sh.unset.block.text.json",
       "sha256": "5460ba967a0ea92991b8c6c2ed1129998e5d03b096d2f2eb14c47d3a7d9c2c83"
-    },
-    "lexicons/sh/unset/card.json": {
-      "sourcePath": "shared/lexicons/schemas/sh.unset.card.json",
-      "sha256": "cecaeeeb5db992f03b97b11d9b701d0b19e1892ee2a018ade474870ccbd25987"
-    },
-    "lexicons/sh/unset/page.json": {
-      "sourcePath": "shared/lexicons/schemas/sh.unset.page.json",
-      "sha256": "79e6fdea38c7e3ebb3b35783f2fe47a6a2195f4c1944007b5d35fa0a37bdbb75"
-    },
-    "lexicons/sh/unset/profile.json": {
-      "sourcePath": "shared/lexicons/schemas/sh.unset.profile.json",
-      "editedHere": "Changed in unset-sh/lexicons after the import (2026-11-25, Alex: fields reduced to displayName, avatar, description and createdAt). This repository is its source from then on.",
-      "sha256": "03159098bdafd80dbf938cdbe15e1bbe12783c7ced7e8f1d4224560d0ef9258e"
     }
   }
 }

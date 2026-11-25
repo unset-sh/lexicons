@@ -9,10 +9,10 @@ the reference application's handling of invalid records.
 
 ## What to fetch
 
-1. **The profile.** Fetch `sh.unset.profile`, record key `self`, from the account's repository and validate it.
+1. **The profile.** Fetch `sh.unset.actor.profile`, record key `self`, from the account's repository and validate it.
    A missing or invalid profile shows no page. A valid profile may have no optional fields; that is different
    from a missing profile.
-2. **The main page.** Fetch `sh.unset.page`, record key `self`, and validate it before interpreting its fields.
+2. **The main page.** Fetch `sh.unset.actor.page`, record key `self`, and validate it before interpreting its fields.
    Confirmed absence means the valid profile's header is shown with no cards, to everyone.
 3. **Only the main page, for now.** An account may hold pages under other record keys. Show none of them until
    you know where they go; skip them without treating them as broken.
@@ -27,9 +27,9 @@ record this behavior in `REFUSED_PAGE`.
 
 1. **Only listed cards show.** Walk the page's `cards` in order. A card that exists in the repository but is not
    in the list is not shown on that page.
-2. **Only the account's own cards count.** Accept an entry only if its `uri` is the address of an `sh.unset.card`
+2. **Only the account's own cards count.** Accept an entry only if its `uri` is the address of an `sh.unset.actor.card`
    record in the page's own repository, written with that account's DID:
-   `at://<the account's DID>/sh.unset.card/<record key>`. Compare it as text. Never resolve a handle to decide.
+   `at://<the account's DID>/sh.unset.actor.card/<record key>`. Compare it as text. Never resolve a handle to decide.
    Skip any other entry: a handle-form address, another account, another kind of record.
 3. **Validate each card.** Skip a missing or invalid card. Validate known block types as part of the card;
    an unknown member of an open union remains valid but is hidden by readers that cannot render it.
@@ -83,6 +83,6 @@ reading. If you edit and save a record, keep them, so you do not erase data a ne
 
 ## Related
 
-- [`sh.unset.profile`](lexicons/profile.md), [`sh.unset.page`](lexicons/page.md) and
-  [`sh.unset.card`](lexicons/card.md)
+- [`sh.unset.actor.profile`](lexicons/profile.md), [`sh.unset.actor.page`](lexicons/page.md) and
+  [`sh.unset.actor.card`](lexicons/card.md)
 - [Quick start](quick-start.md)

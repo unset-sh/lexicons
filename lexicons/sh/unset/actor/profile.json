@@ -1,11 +1,11 @@
 {
   "lexicon": 1,
-  "id": "sh.unset.profile",
+  "id": "sh.unset.actor.profile",
   "defs": {
     "main": {
       "type": "record",
       "key": "literal:self",
-      "description": "Who an account is on unset.sh: the name, picture and description shown at the top of its pages. One per account; its presence means the account uses unset.sh, and deleting it removes the account's pages from readers. How the profile looks is not part of it. The cards shown are in sh.unset.page.",
+      "description": "Who an account is on unset.sh: the name, picture and description shown at the top of its pages. One per account; its presence means the account uses unset.sh, and deleting it removes the account's pages from readers. How the profile looks is not part of it. The cards shown are in sh.unset.actor.page.",
       "record": {
         "type": "object",
         "properties": {

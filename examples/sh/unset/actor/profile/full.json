@@ -1,5 +1,5 @@
 {
-  "$type": "sh.unset.profile",
+  "$type": "sh.unset.actor.profile",
   "displayName": "Sam Rivera",
   "avatar": {
     "$type": "blob",

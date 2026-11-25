@@ -37,10 +37,10 @@ The picture uses the shared [`sh.unset.block.defs#image`](block-defs.md) shape.
 
 ## Example
 
-<!-- example:examples/sh/unset/card/showcase.json -->
+<!-- example:examples/sh/unset/actor/card/showcase.json -->
 ```json
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.showcase",
     "title": "Projects",

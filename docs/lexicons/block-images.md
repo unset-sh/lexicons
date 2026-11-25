@@ -25,10 +25,10 @@ Each entry in `images` uses the shared [`sh.unset.block.defs#image`](block-defs.
 
 ## Example
 
-<!-- example:examples/sh/unset/card/images.json -->
+<!-- example:examples/sh/unset/actor/card/images.json -->
 ```json
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.images",
     "title": "From the studio",

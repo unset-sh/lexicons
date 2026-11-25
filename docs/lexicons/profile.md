@@ -1,10 +1,10 @@
 ---
 title: "Profile lexicon"
-description: "sh.unset.profile: who an account is, shown at the top of its pages."
+description: "sh.unset.actor.profile: who an account is, shown at the top of its pages."
 weight: 1
 ---
 
-`sh.unset.profile` is who an account is on unset.sh: the name, picture and description shown at the top of its pages.
+`sh.unset.actor.profile` is who an account is on unset.sh: the name, picture and description shown at the top of its pages.
 
 ## Overview
 
@@ -13,11 +13,11 @@ unset.sh. Deleting it removes the account's pages from readers.
 
 Every field is optional. A profile with no fields is valid and shows the account's handle.
 
-The profile holds no cards and no styling. What a page shows, and who may see it, is in [`sh.unset.page`](page.md).
+The profile holds no cards and no styling. What a page shows, and who may see it, is in [`sh.unset.actor.page`](page.md).
 
 ## Schema
 
-<!-- schema:sh.unset.profile#main -->
+<!-- schema:sh.unset.actor.profile#main -->
 Record key: `literal:self`
 
 | Property | Type | Required | Limits | Description |
@@ -32,10 +32,10 @@ Record key: `literal:self`
 
 A minimal profile with a creation time:
 
-<!-- example:examples/sh/unset/profile/minimal.json -->
+<!-- example:examples/sh/unset/actor/profile/minimal.json -->
 ```json
 {
-  "$type": "sh.unset.profile",
+  "$type": "sh.unset.actor.profile",
   "createdAt": "2026-11-21T15:04:05.000Z"
 }
 ```
@@ -43,10 +43,10 @@ A minimal profile with a creation time:
 
 A complete profile:
 
-<!-- example:examples/sh/unset/profile/full.json -->
+<!-- example:examples/sh/unset/actor/profile/full.json -->
 ```json
 {
-  "$type": "sh.unset.profile",
+  "$type": "sh.unset.actor.profile",
   "displayName": "Sam Rivera",
   "avatar": {
     "$type": "blob",
@@ -64,7 +64,7 @@ A complete profile:
 
 ## View the lexicon
 
-[`lexicons/sh/unset/profile.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/profile.json)
+[`lexicons/sh/unset/actor/profile.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/actor/profile.json)
 
 ## Writing a profile
 

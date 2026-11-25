@@ -33,10 +33,10 @@ the site name from its own list of known sites.
 
 ## Example
 
-<!-- example:examples/sh/unset/card/links.json -->
+<!-- example:examples/sh/unset/actor/card/links.json -->
 ```json
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.links",
     "title": "Elsewhere",

@@ -1,10 +1,10 @@
 ---
 title: "Card lexicon"
-description: "sh.unset.card: one card on a page, holding exactly one block."
+description: "sh.unset.actor.card: one card on a page, holding exactly one block."
 weight: 3
 ---
 
-`sh.unset.card` is one card on a page. It holds exactly one block.
+`sh.unset.actor.card` is one card on a page. It holds exactly one block.
 
 ## Overview
 
@@ -16,7 +16,7 @@ removing the page's entry hides it without deleting it. One card may be named on
 
 ## Schema
 
-<!-- schema:sh.unset.card#main -->
+<!-- schema:sh.unset.actor.card#main -->
 Record key: `tid`
 
 | Property | Type | Required | Limits | Description |
@@ -44,10 +44,10 @@ reader that does not know the type hides the card and does not treat the record 
 
 ## Example
 
-<!-- example:examples/sh/unset/card/text.json -->
+<!-- example:examples/sh/unset/actor/card/text.json -->
 ```json
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.text",
     "text": "## About\n\nI design maps and the tools around them. Before that I set type for a small press.\n\n- Open to freelance work from March\n- Talks and workshops on request\n\nRead more on [my site](https://example.com/about)."
@@ -63,7 +63,7 @@ Each block's page has an example card holding that block.
 
 ## View the lexicon
 
-[`lexicons/sh/unset/card.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/card.json)
+[`lexicons/sh/unset/actor/card.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/actor/card.json)
 
 ## Writing a card
 

@@ -18,7 +18,7 @@ These schemas use two groups:
 
 | Schema group | DNS TXT name |
 | --- | --- |
-| `sh.unset.profile`, `sh.unset.page`, `sh.unset.card`, `sh.unset.authFull` | `_lexicon.unset.sh` |
+| `sh.unset.actor.profile`, `sh.unset.actor.page`, `sh.unset.actor.card`, `sh.unset.actor.authProfile` | `_lexicon.actor.unset.sh` |
 | `sh.unset.block.*` | `_lexicon.block.unset.sh` |
 
 Resolution does not recurse between groups, so the first TXT record cannot stand in for the second. See the

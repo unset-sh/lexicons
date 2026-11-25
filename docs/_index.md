@@ -17,22 +17,22 @@ the pages belong to them and any app can read them.
 
 | Lexicon | Kind | What it is |
 | --- | --- | --- |
-| [`sh.unset.profile`](lexicons/profile.md) | Record | Who the account is: name, picture and description. One per account. |
-| [`sh.unset.page`](lexicons/page.md) | Record | One page: the cards it shows, in order, and who it is meant for. The main page is `self`. |
-| [`sh.unset.card`](lexicons/card.md) | Record | One card. It holds exactly one block. |
+| [`sh.unset.actor.profile`](lexicons/profile.md) | Record | Who the account is: name, picture and description. One per account. |
+| [`sh.unset.actor.page`](lexicons/page.md) | Record | One page: the cards it shows, in order, and who it is meant for. The main page is `self`. |
+| [`sh.unset.actor.card`](lexicons/card.md) | Record | One card. It holds exactly one block. |
 | [`sh.unset.block.text`](lexicons/block-text.md) | Block | Formatted text, written in Markdown. |
 | [`sh.unset.block.links`](lexicons/block-links.md) | Block | A set of links, such as accounts on other sites. |
 | [`sh.unset.block.showcase`](lexicons/block-showcase.md) | Block | Titled items such as projects, writing or talks. |
 | [`sh.unset.block.buttons`](lexicons/block-buttons.md) | Block | A short pitch with up to five buttons. |
 | [`sh.unset.block.images`](lexicons/block-images.md) | Block | One picture, or a small set shown together. |
 | [`sh.unset.block.defs`](lexicons/block-defs.md) | Shared definitions | The picture shape the blocks share. |
-| [`sh.unset.authFull`](permissions.md) | Permission set | What an app asks for to write a profile, its pages and their cards. |
+| [`sh.unset.actor.authProfile`](permissions.md) | Permission set | What an app asks for to write a profile, its pages and their cards. |
 
 ```text
-sh.unset.profile                 who the account is, shown at the top of its pages
-sh.unset.page (self)             the main page
+sh.unset.actor.profile                 who the account is, shown at the top of its pages
+sh.unset.actor.page (self)             the main page
 └── cards                        ordered list of at:// addresses
-    └── sh.unset.card            one card
+    └── sh.unset.actor.card            one card
         └── content              one block
             └── sh.unset.block.* text, links, showcase, buttons or images
 ```

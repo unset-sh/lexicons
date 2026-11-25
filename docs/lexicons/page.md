@@ -1,10 +1,10 @@
 ---
 title: "Page lexicon"
-description: "sh.unset.page: one page of an account and the cards it shows."
+description: "sh.unset.actor.page: one page of an account and the cards it shows."
 weight: 2
 ---
 
-`sh.unset.page` is one page of an account: the cards it shows, in order, and who it is meant for.
+`sh.unset.actor.page` is one page of an account: the cards it shows, in order, and who it is meant for.
 
 ## Overview
 
@@ -19,7 +19,7 @@ page leaves the profile shown to everyone, with no cards.
 
 ## Schema
 
-<!-- schema:sh.unset.page#main -->
+<!-- schema:sh.unset.actor.page#main -->
 Record key: `any`
 
 | Property | Type | Required | Limits | Description |
@@ -33,20 +33,20 @@ Record key: `any`
 
 Each entry in `cards` is one place in the page order.
 
-<!-- schema:sh.unset.page#cardRef -->
+<!-- schema:sh.unset.actor.page#cardRef -->
 | Property | Type | Required | Limits | Description |
 | --- | --- | --- | --- | --- |
-| `uri` | string (at-uri) | Yes |  | at:// address of an sh.unset.card record, written with the DID. Readers accept only a card record in this page's own repository, named by that DID, and skip any other entry (a handle-form address, another account, another kind of record). |
+| `uri` | string (at-uri) | Yes |  | at:// address of an sh.unset.actor.card record, written with the DID. Readers accept only a card record in this page's own repository, named by that DID, and skip any other entry (a handle-form address, another account, another kind of record). |
 <!-- /schema -->
 
 ## Examples
 
 A minimal page with a creation time:
 
-<!-- example:examples/sh/unset/page/minimal.json -->
+<!-- example:examples/sh/unset/actor/page/minimal.json -->
 ```json
 {
-  "$type": "sh.unset.page",
+  "$type": "sh.unset.actor.page",
   "createdAt": "2026-11-21T15:04:05.000Z"
 }
 ```
@@ -54,25 +54,25 @@ A minimal page with a creation time:
 
 A main page with five cards:
 
-<!-- example:examples/sh/unset/page/main.json -->
+<!-- example:examples/sh/unset/actor/page/main.json -->
 ```json
 {
-  "$type": "sh.unset.page",
+  "$type": "sh.unset.actor.page",
   "cards": [
     {
-      "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.card/3lzh2a2c3d4e2"
+      "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.actor.card/3lzh2a2c3d4e2"
     },
     {
-      "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.card/3lzh2a2c3d4f2"
+      "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.actor.card/3lzh2a2c3d4f2"
     },
     {
-      "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.card/3lzh2a2c3d4g2"
+      "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.actor.card/3lzh2a2c3d4g2"
     },
     {
-      "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.card/3lzh2a2c3d4h2"
+      "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.actor.card/3lzh2a2c3d4h2"
     },
     {
-      "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.card/3lzh2a2c3d4i2"
+      "uri": "at://did:plc:abcdefghijklmnopqrstuvwx/sh.unset.actor.card/3lzh2a2c3d4i2"
     }
   ],
   "visibility": "public",
@@ -83,7 +83,7 @@ A main page with five cards:
 
 ## View the lexicon
 
-[`lexicons/sh/unset/page.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/page.json)
+[`lexicons/sh/unset/actor/page.json`](https://github.com/unset-sh/lexicons/blob/main/lexicons/sh/unset/actor/page.json)
 
 ## Writing a page
 

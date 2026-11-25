@@ -1,5 +1,5 @@
 {
-  "$type": "sh.unset.card",
+  "$type": "sh.unset.actor.card",
   "content": {
     "$type": "sh.unset.block.text",
     "text": "## Opening hours\n\nWe are open on weekdays.\n\n| Day | Hours |\n| --- | --- |\n| Mon | 9-17 |\n| Tue | 9-17 |",

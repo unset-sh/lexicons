@@ -1,6 +1,6 @@
 {
   "lexicon": 1,
-  "id": "sh.unset.authFull",
+  "id": "sh.unset.actor.authProfile",
   "defs": {
     "main": {
       "type": "permission-set",
@@ -12,12 +12,12 @@
       "detail:lang": {
         "en": "Create and edit your unset.sh profile, its pages and their cards. Nothing else in your account."
       },
-      "description": "Everything unset.sh writes in an account's repository.",
+      "description": "What an app needs to write an account's unset.sh profile, pages and cards (sh.unset.actor). Other features get their own permission set in their own group, so this set never grows beyond sh.unset.actor.",
       "permissions": [
         {
           "type": "permission",
           "resource": "repo",
-          "collection": ["sh.unset.profile", "sh.unset.page", "sh.unset.card"]
+          "collection": ["sh.unset.actor.profile", "sh.unset.actor.page", "sh.unset.actor.card"]
         }
       ]
     }
